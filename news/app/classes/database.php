@@ -53,7 +53,7 @@ class Database
 
             $result = $this->query('SELECT * FROM ' . $table . ';');
 
-            if ($result === false) {
+            if ($this->error()) {
                 $query = 'CREATE TABLE ' . $table . ' (' . join(', ', $columns) . ');';
                 $result = $this->query($query);
 
