@@ -12,7 +12,7 @@ if (isset($_POST) && count($_POST)) {
             $user->redirect('.');
         }
         else {
-            var_dump($status);
+            echo '<p class="warning">Login faild.</p>';
         }
     }
     else {
